@@ -1,4 +1,4 @@
-import '../../../src/index.js';
+import 'cypress-extender-arrays';
 
 describe('arrays', () => {
     before(() => {
