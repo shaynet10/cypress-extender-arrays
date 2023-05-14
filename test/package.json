@@ -14,6 +14,6 @@
   "license": "MIT",
   "dependencies": {
     "cypress": "^12.12.0",
-    "cypress-extender-arrays": "^1.0.32"
+    "cypress-extender-arrays": "^1.1.0"
   }
 }
