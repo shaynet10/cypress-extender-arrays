@@ -1,0 +1,44 @@
+{
+  "name": "cypress-extender-arrays",
+  "version": "1.0.32",
+  "description": "Extends the functinality of Cypress to ease its usage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd test; ./node_modules/.bin/cypress run",
+    "test:open": "cd test; ./node_modules/.bin/cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shaynet10/cypress-extender"
+  },
+  "keywords": [
+    "Cypress",
+    "Cypres",
+    "Cyprss",
+    "pptr",
+    "selenium",
+    "condition",
+    "loop",
+    "cypress",
+    "cyprss",
+    "cprss",
+    "extend",
+    "extnd",
+    "extender",
+    "extending",
+    "if",
+    "while",
+    "wait",
+    "loop",
+    "cpress",
+    "cy",
+    "cy.get",
+    "cypress-if",
+    "test",
+    "cypress-test",
+    "condition",
+    "cypress-condition"
+  ],
+  "author": "Shay Gueta",
+  "license": "MIT"
+}
