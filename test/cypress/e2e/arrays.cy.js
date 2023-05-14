@@ -1,4 +1,4 @@
-import 'cypress-extender-arrays';
+import '../../../src/index';
 
 describe('arrays', () => {
     before(() => {
@@ -44,6 +44,12 @@ describe('arrays', () => {
     it('test array reduce with number', () => {
         cy.get('a').map(e => e.text()).reduce((acc, val) => acc += val.length, 0)
         .should('be.gt', 0);
+    });
+
+    it('test array reverse', () => {
+        cy.get('a').map(e => e.text()).reverse().then(values => {
+            cy.get('a').reverse().map(e => e.text()).should('deep.eq', values);
+        });
     });
 });
 

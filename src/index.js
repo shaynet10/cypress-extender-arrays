@@ -5,6 +5,7 @@ const isOfType = (val, requiredType = 'string') => {
         } else {
             currentType = typeof val;
         }
+        console.log('typeOf: ', currentType);
         return currentType === requiredType;
 };
 
@@ -50,4 +51,9 @@ Cypress.Commands.add('join', {
         });
     });
 
-    
+
+Cypress.Commands.add('reverse', { 
+    prevSubject: ['Array', 'element'],
+}, (subject) => {
+    return cy.wrap(Array.from(subject).reverse());
+});
