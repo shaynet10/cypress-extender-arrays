@@ -11,6 +11,10 @@ describe('arrays', () => {
         });
     });
 
+    it('test flat', () => {
+        cy.wrap([0,1,2,3,[4,5],[6],[[7]],[8,[9]]]).flat(2).should('deep.eq', [0,1,2,3,4,5,6,7,8,9]);
+    });
+
     it('test every prevSubjet is array', () => {
         cy.get('a').map(e => e.text()).every(v => typeof v === 'string').should('be.true');
     });

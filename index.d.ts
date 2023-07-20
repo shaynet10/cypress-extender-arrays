@@ -5,6 +5,7 @@ declare namespace Cypress {
         every(callbackFn): Chainable<boolean>;
         join(delimiter?: string): Chainable<string>;
         reverse(): Chainable<any>;
+        flat(depth?: number): Chainable<any[]>;
     }
 }
 

@@ -57,3 +57,9 @@ Cypress.Commands.add('reverse', {
 }, (subject) => {
     return cy.wrap(Array.from(subject).reverse());
 });
+
+Cypress.Commands.add('flat', {
+    prevSubject: ['Array', 'element'],
+}, (subject, depth = 1) => {
+    return cy.wrap(Array.from(subject).flat(depth));
+});
