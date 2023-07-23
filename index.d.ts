@@ -6,6 +6,7 @@ declare namespace Cypress {
         join(delimiter?: string): Chainable<string>;
         reverse(): Chainable<any>;
         flat(depth?: number): Chainable<any[]>;
+        indexOf(value: any, fromIndex?: number): Chainable<number>;
     }
 }
 

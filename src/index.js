@@ -63,3 +63,9 @@ Cypress.Commands.add('flat', {
 }, (subject, depth = 1) => {
     return cy.wrap(Array.from(subject).flat(depth));
 });
+
+Cypress.Commands.add('indexOf', {
+    prevSubject: ['Array', 'element'],
+}, (subject, value, fromIndex = 0) => {
+    return cy.wrap(Array.from(subject).indexOf(value, fromIndex));
+});
