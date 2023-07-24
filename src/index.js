@@ -69,3 +69,13 @@ Cypress.Commands.add('indexOf', {
 }, (subject, value, fromIndex = 0) => {
     return cy.wrap(Array.from(subject).indexOf(value, fromIndex));
 });
+
+Cypress.Commands.add('lastIndexOf', {
+    prevSubject: ['Array', 'element'],
+}, (subject, value, fromIndex = null) => {
+    const array = Array.from(subject);
+    if (!fromIndex) {
+        fromIndex = array.length - 1;
+    }
+    return cy.wrap(array.lastIndexOf(value, fromIndex));
+});

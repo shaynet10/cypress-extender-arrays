@@ -15,13 +15,22 @@ describe('arrays', () => {
         cy.wrap([0,1,2,3,[4,5],[6],[[7]],[8,[9]]]).flat(2).should('deep.eq', [0,1,2,3,4,5,6,7,8,9]);
     });
 
-    it.only('test indexOf', () => {
+    it('test indexOf', () => {
         cy.wrap([5,6,7,8,9,7]).indexOf(7).should('deep.eq', 2);
         cy.wrap([5,6,7,8,9,7]).indexOf(7, 2).should('deep.eq', 2);
         cy.wrap([5,6,7,8,9,7]).indexOf(7, 3).should('deep.eq', 5);
         cy.wrap([5,6,7,8,9,7]).indexOf(5).should('deep.eq', 0);
         cy.wrap([5,6,7,8,9,7]).indexOf(2).should('deep.eq', -1);
     });
+
+    it('test last indexOf', () => {
+        cy.wrap([5,6,7,8,9,7]).lastIndexOf(7).should('deep.eq', 5);
+        cy.wrap([5,6,7,8,9,7]).lastIndexOf(7, 2).should('deep.eq', 2);
+        cy.wrap([5,6,7,8,9,7]).lastIndexOf(7, 3).should('deep.eq', 2);
+        cy.wrap([5,6,7,8,9,7]).lastIndexOf(5).should('deep.eq', 0);
+        cy.wrap([5,6,7,8,9,7]).lastIndexOf(2).should('deep.eq', -1);
+    });
+
 
     it('test every prevSubjet is array', () => {
         cy.get('a').map(e => e.text()).every(v => typeof v === 'string').should('be.true');
