@@ -19,6 +19,10 @@ describe('arrays', () => {
         });
     });
 
+    it('test sort', () => {
+        cy.wrap([1,5,6,8,5,3,2,6,8]).sort().should('deep.eq', [1,2,3,5,5,6,6,8,8]);
+    });
+
     it('test flat', () => {
         cy.wrap([0,1,2,3,[4,5],[6],[[7]],[8,[9]]]).flat(2).should('deep.eq', [0,1,2,3,4,5,6,7,8,9]);
     });

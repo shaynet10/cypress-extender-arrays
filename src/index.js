@@ -79,3 +79,12 @@ Cypress.Commands.add('lastIndexOf', {
     }
     return cy.wrap(array.lastIndexOf(value, fromIndex));
 });
+
+Cypress.Commands.add('sort', {
+    prevSubject: ['Array', 'element'],
+}, (subject, compareFn = null) => {
+    if (!compareFn) {
+        return cy.wrap(Array.from(subject).sort());
+    }
+    return cy.wrap(Array.from(subject).sort(compareFn));
+});

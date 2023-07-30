@@ -8,6 +8,7 @@ declare namespace Cypress {
         flat(depth?: number): Chainable<any[]>;
         indexOf(value: any, fromIndex?: number): Chainable<number>;
         lastIndexOf(value: any, fromIndex?: number): Chainable<number>;
+        sort(compareFn?): Chainable<any>;
     }
 }
 
