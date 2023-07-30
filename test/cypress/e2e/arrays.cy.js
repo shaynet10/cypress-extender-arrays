@@ -5,9 +5,17 @@ describe('arrays', () => {
         cy.visit('https://www.google.com/');
     });
     
-    it('test map', () => {
+    it('test map for element', () => {
         cy.get('a').map(e => e.text()).then(array => {
             cy.wrap(array.every(v => typeof v === 'string')).should('be.true');
+        });
+    });
+
+    it('test map for array', () => {
+        cy.wrap([11,22,33]).map(e => e + 5).then(array => {
+            cy.wrap(array[0]).should('eq', 16);
+            cy.wrap(array[1]).should('eq', 27);
+            cy.wrap(array[2]).should('eq', 38);
         });
     });
 

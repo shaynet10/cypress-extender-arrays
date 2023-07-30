@@ -11,7 +11,7 @@ const isOfType = (val, requiredType = 'string') => {
 
 
 Cypress.Commands.add('map', {
-        prevSubject: ['element'],
+        prevSubject: ['element', 'Array'],
     }, (subject, callbackFn) => {
         const results = [];
         cy.wrap(subject).each(e => {

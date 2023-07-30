@@ -69,6 +69,19 @@ Once you done, you'll be able to enjoy the following Cypress commands:
 ```
 
 <br />
+<p>Another example (previous element is an array): </p>
+
+``` javascript
+        cy.wrap([11,22,33]).map(e => e + 5).then(array => {
+            cy.wrap(array[0]).should('eq', 16);
+            cy.wrap(array[1]).should('eq', 27);
+            cy.wrap(array[2]).should('eq', 38);
+        });
+```
+
+
+
+<br />
 <br />
 
 
